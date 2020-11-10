@@ -1,22 +1,41 @@
 PODS:
-  - NDLog (0.0.5)
-  - NDModificationOperators (0.0.2)
-  - NDUtils/Core (0.0.4.1)
-  - NDUtils/Foundation (0.0.4.1):
-    - NDLog (~> 0.0.5)
+  - NDLog (0.0.6.1):
+    - NDLog/Swift (= 0.0.6.1)
+  - NDLog/Core (0.0.6.1)
+  - NDLog/ObjC (0.0.6.1):
+    - NDLog/Core
+  - NDLog/Swift (0.0.6.1):
+    - NDLog/Core
+  - NDModificationOperators/ObjC (0.0.3.1)
+  - NDUtils/Core (0.0.5)
+  - NDUtils/Foundation (0.0.5):
+    - NDLog (~> 0.0.6)
     - NDUtils/Core
-  - NDUtils/libextobjc (0.0.4.1):
+  - NDUtils/libextobjc (0.0.5):
     - NDUtils/Core
-  - NDUtils/objc (0.0.4.1):
-    - NDLog (~> 0.0.5)
+  - NDUtils/objc (0.0.5):
+    - NDLog (~> 0.0.6)
     - NDUtils/Core
+  - NDWebKit (0.0.2):
+    - NDWebKit/Swift (= 0.0.2)
+  - NDWebKit/Core (0.0.2):
+    - NDLog/ObjC (~> 0.0.6)
+    - NDModificationOperators/ObjC (~> 0.0.3)
+    - NDUtils/Foundation (~> 0.0.5)
+    - NDUtils/libextobjc (~> 0.0.5)
+    - NDUtils/objc (~> 0.0.5)
+  - NDWebKit/ObjC (0.0.2):
+    - NDWebKit/Core
+  - NDWebKit/Swift (0.0.2):
+    - NDWebKit/ObjC
 
 DEPENDENCIES:
-  - NDLog (from `../NDLog`)
-  - NDModificationOperators (from `../NDModificationOperators`)
+  - NDLog/ObjC (from `../NDLog`)
+  - NDModificationOperators/ObjC (from `../NDModificationOperators`)
   - NDUtils/Foundation (from `../NDUtils`)
   - NDUtils/libextobjc (from `../NDUtils`)
   - NDUtils/objc (from `../NDUtils`)
+  - NDWebKit (from `.`)
 
 EXTERNAL SOURCES:
   NDLog:
@@ -25,12 +44,15 @@ EXTERNAL SOURCES:
     :path: "../NDModificationOperators"
   NDUtils:
     :path: "../NDUtils"
+  NDWebKit:
+    :path: "."
 
 SPEC CHECKSUMS:
-  NDLog: 2d478a5bc74f17ee56fea08adb6dacdaa36a07e6
-  NDModificationOperators: 9361661d72ebd45b0d11fad61b2a6a581464ba04
-  NDUtils: 071967534549cb07e0122a53af462e4a5d6da124
+  NDLog: 1e996efb979679f547dcf729a955fe92577ed2c5
+  NDModificationOperators: ce7cf4900dd8c49546cda0e8ae465bb02d74e089
+  NDUtils: 1a72e3cfd4f1510b261999c0f26f17648c033ac9
+  NDWebKit: cc875c2552a43d803410083f165f1ee635f10d95
 
-PODFILE CHECKSUM: e08a34ac353cf9a7936c355bb27501c3c185b421
+PODFILE CHECKSUM: 5f9cc09cb5fd6fb083133d3c5cc379f5187d0cfa
 
 COCOAPODS: 1.9.3
